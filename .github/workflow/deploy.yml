@@ -20,7 +20,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::572556120297:role/GitHubActionsS3DeployRole
-          aws-region: ${{ env.Europe (Stockholm): eu-north-1 }}
+          aws-region: ${{ env.Europe (Stockholm)}}
       - name: Deploy files to S3
         run: |
           aws s3 sync . s3://${{ env.S3_BUCKET }} \
